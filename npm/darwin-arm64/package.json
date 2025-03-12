@@ -1,0 +1,35 @@
+{
+  "name": "@dockfries/chardetng-darwin-arm64",
+  "version": "0.0.1",
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "description": "Simple charset detector, powered by chardetng and napi-rs.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dockfries/chardetng.git"
+  },
+  "keywords": [
+    "napi-rs",
+    "NAPI",
+    "N-API",
+    "Rust",
+    "node-addon",
+    "node-addon-api",
+    "chardetng",
+    "chardet",
+    "charset",
+    "detector"
+  ],
+  "main": "chardetng.darwin-arm64.node",
+  "files": [
+    "chardetng.darwin-arm64.node"
+  ],
+  "engines": {
+    "node": ">= 10"
+  }
+}

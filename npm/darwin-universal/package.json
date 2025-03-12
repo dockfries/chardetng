@@ -1,0 +1,32 @@
+{
+  "name": "@dockfries/chardetng-darwin-universal",
+  "version": "0.0.1",
+  "os": [
+    "darwin"
+  ],
+  "description": "Simple charset detector, powered by chardetng and napi-rs.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dockfries/chardetng.git"
+  },
+  "keywords": [
+    "napi-rs",
+    "NAPI",
+    "N-API",
+    "Rust",
+    "node-addon",
+    "node-addon-api",
+    "chardetng",
+    "chardet",
+    "charset",
+    "detector"
+  ],
+  "main": "chardetng.darwin-universal.node",
+  "files": [
+    "chardetng.darwin-universal.node"
+  ],
+  "engines": {
+    "node": ">= 10"
+  }
+}
