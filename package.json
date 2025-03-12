@@ -1,0 +1,75 @@
+{
+  "name": "@dockfries/chardetng",
+  "version": "0.0.1",
+  "description": "Simple charset detector, powered by chardetng and napi-rs.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dockfries/chardetng.git"
+  },
+  "keywords": [
+    "napi-rs",
+    "NAPI",
+    "N-API",
+    "Rust",
+    "node-addon",
+    "node-addon-api",
+    "chardetng",
+    "chardet",
+    "charset",
+    "detector"
+  ],
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">= 10"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform",
+    "lint": "eslint . --fix",
+    "prepare": "husky",
+    "prepublishOnly": "napi prepublish -t npm && esbuild --minify --outfile=index.js --allow-overwrite index.js",
+    "test": "ava",
+    "universal": "napi universal",
+    "version": "napi version"
+  },
+  "ava": {
+    "timeout": "2m"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.9.0",
+    "@napi-rs/cli": "^2.18.4",
+    "ava": "^6.0.1",
+    "esbuild": "^0.25.1",
+    "eslint": "^9.22.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3"
+  },
+  "lint-staged": {
+    "*.@(js|ts|yml|toml|json|md)": [
+      "eslint --fix"
+    ]
+  },
+  "napi": {
+    "name": "chardetng",
+    "triples": {
+      "additional": [
+        "aarch64-apple-darwin",
+        "aarch64-linux-android",
+        "aarch64-unknown-linux-gnu",
+        "aarch64-unknown-linux-musl",
+        "aarch64-pc-windows-msvc",
+        "x86_64-unknown-linux-musl",
+        "i686-pc-windows-msvc",
+        "universal-apple-darwin",
+        "riscv64gc-unknown-linux-gnu"
+      ]
+    }
+  }
+}
